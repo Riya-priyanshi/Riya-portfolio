@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Riya Priyanshi Nag | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e6e0fa;--surface:#fff;--ink:#1b1740;--muted:#55527a;--line:#d2c9ee;--accent:#6c4dff;--accent2:#ff6b8b;--soft:#d9d0f7;
+--h:'Sora','Segoe UI',system-ui,sans-serif;--b:'DM Sans','Segoe UI',system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#110f26;--surface:#1b1840;--ink:#f1efff;--muted:#a9a5cc;--line:#2c2860;--soft:#26215a}}
+:root[data-theme="dark"]{--bg:#110f26;--surface:#1b1840;--ink:#f1efff;--muted:#a9a5cc;--line:#2c2860;--soft:#26215a}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{margin:0;background-color:var(--bg);background-image:radial-gradient(circle at 12% 8%,rgba(108,77,255,.18),transparent 42%),radial-gradient(circle at 92% 32%,rgba(255,107,139,.16),transparent 40%),radial-gradient(circle at 18% 88%,rgba(108,77,255,.14),transparent 42%),radial-gradient(rgba(108,77,255,.16) 1.2px,transparent 1.3px);background-size:auto,auto,auto,26px 26px;background-attachment:fixed;color:var(--ink);font:400 1.05rem/1.7 var(--b);overflow-x:hidden}
+h1,h2,h3{font-family:var(--h);line-height:1.15;margin:0}
+a{color:inherit}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+section{padding:96px 0}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:12px}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 40px}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:20;padding-top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:800 1.15rem var(--h);text-decoration:none}
+.logo span{color:var(--accent)}
+.links{display:flex;gap:4px;align-items:center}
+.links a{text-decoration:none;font-size:.92rem;font-weight:500;padding:8px 12px;border-radius:99px;color:var(--muted);transition:.2s}
+.links a:hover,.links a.on{background:var(--soft);color:var(--accent)}
+.tbtn,.burger{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:99px;width:40px;height:40px;cursor:pointer;font-size:1.05rem}
+.burger{display:none}
+.focus,a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:99px;font:700 .98rem var(--b);text-decoration:none;border:2px solid var(--accent);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn.p{background:var(--accent);color:#fff}
+.btn.p:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(108,77,255,.35)}
+.btn.o{background:transparent;color:var(--accent)}
+.btn.o:hover{background:var(--soft);transform:translateY(-3px)}
+/* hero */
+#home{min-height:100vh;display:flex;align-items:center;padding-top:110px;position:relative;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;z-index:-1;animation:float 14s ease-in-out infinite}
+.b1{width:380px;height:380px;background:var(--accent);top:5%;right:-80px}
+.b2{width:300px;height:300px;background:var(--accent2);bottom:0;left:-80px;animation-delay:-6s}
+@keyframes float{50%{transform:translate(30px,-40px) scale(1.1)}}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.hi{font-weight:700;color:var(--accent);margin:0 0 10px}
+h1{font-size:clamp(2.4rem,6.4vw,4.4rem);letter-spacing:-.02em}
+.role{font:700 clamp(1.1rem,2.6vw,1.6rem) var(--h);margin:18px 0;min-height:2.2em;color:var(--muted)}
+.role b{color:var(--accent)}
+.cur{display:inline-block;width:3px;height:1.1em;background:var(--accent2);margin-left:3px;vertical-align:-.15em;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p.d{color:var(--muted);max-width:52ch}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.pic{position:relative;width:min(340px,80%);aspect-ratio:1;margin-inline:auto}
+.pic::before{content:"";position:absolute;inset:-14px;border-radius:50%;background:conic-gradient(var(--accent),var(--accent2),var(--accent));animation:spin 9s linear infinite}
+.pic::after{content:"";position:absolute;inset:-6px;border-radius:50%;background:var(--bg)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.avatar{position:absolute;inset:0;z-index:1;border-radius:50%;overflow:hidden;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#fff;font:800 4.2rem var(--h);cursor:pointer;border:0;padding:0}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.chip{position:absolute;z-index:2;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:8px 14px;font:700 .85rem var(--h);box-shadow:0 8px 20px rgba(27,23,64,.12);animation:float 7s ease-in-out infinite}
+.c1{top:6%;left:-8%}.c2{bottom:12%;right:-10%;animation-delay:-3s}.c3{bottom:-2%;left:6%;animation-delay:-5s}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+/* about */
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:start}
+.about p{margin:0 0 16px;color:var(--muted)}
+.facts{display:grid;gap:14px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 22px}
+.fact span{display:block;font-size:.85rem;color:var(--muted)}
+.fact strong{font:700 1.1rem var(--h)}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;transition:transform .25s,border-color .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 14px 30px rgba(108,77,255,.14)}
+.card h3{font-size:1.15rem;margin-bottom:8px}
+.card p{margin:0;color:var(--muted);font-size:.97rem}
+.ico{width:46px;height:46px;border-radius:14px;background:var(--soft);display:grid;place-items:center;font-size:1.3rem;margin-bottom:16px}
+/* skills */
+.skill{margin-bottom:22px}
+.skill div{display:flex;justify-content:space-between;font-weight:700;margin-bottom:8px}
+.bar{height:10px;border-radius:99px;background:var(--soft);overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+.tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.tag{padding:6px 14px;border-radius:99px;background:var(--soft);color:var(--accent);font-weight:700;font-size:.85rem}
+/* timeline */
+.tl{border-left:3px solid var(--line);margin-left:8px;padding-left:28px}
+.tl .card{position:relative}
+.tl .card::before{content:"";position:absolute;left:-39px;top:30px;width:16px;height:16px;border-radius:50%;background:var(--accent);border:4px solid var(--bg)}
+.yr{font-weight:700;color:var(--accent2);font-size:.9rem}
+/* projects */
+.thumb{height:140px;border-radius:14px;margin-bottom:18px;display:grid;place-items:center;font-size:2.4rem;background:linear-gradient(135deg,var(--soft),var(--surface));border:1px solid var(--line)}
+.links2{display:flex;gap:16px;margin-top:16px;font-weight:700;font-size:.92rem}
+.links2 a{color:var(--accent);text-decoration:none}
+.links2 a:hover{text-decoration:underline}
+/* resume */
+.res{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:36px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+.res p{color:var(--muted);margin:8px 0 0}
+/* contact */
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.card.c{text-decoration:none;display:block}
+footer{text-align:center;padding:32px 20px;color:var(--muted);border-top:1px solid var(--line);font-size:.9rem}
+/* responsive */
+@media(max-width:860px){
+section{padding:72px 0}
+.hero,.about,.skills,.res{grid-template-columns:1fr}
+.hero{text-align:center}.hero p.d{margin-inline:auto}.cta{justify-content:center}
+.pic{order:-1;width:min(240px,70%)}.avatar{font-size:3rem}
+.burger{display:block}
+.links{position:fixed;top:calc(68px + env(safe-area-inset-top,0px));left:0;right:0;flex-direction:column;background:var(--bg);padding:12px 20px 20px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .3s;align-items:stretch;text-align:center}
+.links.open{transform:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.bar i{transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav">
+<a class="logo" href="#home">Riya<span>.</span>Nag</a>
+<div class="links" id="links">
+<a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#projects">Projects</a><a href="#certs">Certifications</a><a href="#resume">Resume</a><a href="#contact">Contact</a>
+</div>
+<div style="display:flex;gap:8px">
+<button class="tbtn" id="theme" aria-label="Toggle light or dark theme">◐</button>
+<button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+</div></div></nav>
+
+<section id="home"><div class="blob b1"></div><div class="blob b2"></div>
+<div class="wrap hero">
+<div>
+<p class="hi">Hello, I'm</p>
+<h1>Riya Priyanshi Nag</h1>
+<div class="role">I'm a <b id="type"></b><span class="cur"></span></div>
+<p class="d">BCA student at SAGEMMC who enjoys turning ideas into clean, working websites and apps. I'm looking for my first role as a developer.</p>
+<div class="cta"><a class="btn p" href="#projects">View my projects</a><a class="btn o" href="#contact">Contact me</a></div>
+</div>
+<div class="pic">
+<button class="avatar" id="avatar" aria-label="Riya Priyanshi Nag profile photo"><img alt="Riya Priyanshi Nag" src="image.jpeg"></button>
+<div class="chip c1">Python</div><div class="chip c2">React</div><div class="chip c3">SQL</div>
+</div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<h2 class="rv">About me</h2>
+<p class="lead rv">A learner who likes building things that people can actually use.</p>
+<div class="about rv">
+<div>
+<p>I'm Riya, a Bachelor of Computer Applications student at SAGEMMC. I enjoy solving problems with Python and building responsive interfaces with HTML, CSS, JavaScript and React.</p>
+<p>I'm exploring front-end, back-end and full stack development, and I learn best by building small projects and improving them step by step.</p>
+<p>I'm open to internships and entry-level roles where I can learn from a team and contribute from day one.</p>
+</div>
+<div class="facts">
+<div class="fact"><span>Studying</span><strong>BCA, Computer Application</strong></div>
+<div class="fact"><span>College</span><strong>SAGEMMC</strong></div>
+<div class="fact"><span>Aiming for</span><strong>Python / Frontend / Full Stack Developer</strong></div>
+</div></div></div></section>
+
+<section id="skills" style="background:color-mix(in srgb,var(--surface) 72%,transparent)"><div class="wrap">
+<h2 class="rv">Skills</h2>
+<p class="lead rv">The tools I use to build and the level I'm at today.</p>
+<div class="skills rv">
+<div class="col">
+<div class="skill"><div><span>Python</span><span>80%</span></div><div class="bar"><i data-w="80"></i></div></div>
+<div class="skill"><div><span>HTML</span><span>90%</span></div><div class="bar"><i data-w="90"></i></div></div>
+<div class="skill"><div><span>CSS</span><span>85%</span></div><div class="bar"><i data-w="85"></i></div></div>
+</div>
+<div class="col">
+<div class="skill"><div><span>JavaScript</span><span>75%</span></div><div class="bar"><i data-w="75"></i></div></div>
+<div class="skill"><div><span>React</span><span>70%</span></div><div class="bar"><i data-w="70"></i></div></div>
+<div class="skill"><div><span>SQL</span><span>75%</span></div><div class="bar"><i data-w="75"></i></div></div>
+</div></div>
+<div class="tags rv"><span class="tag">Problem solving</span><span class="tag">Responsive design</span><span class="tag">Teamwork</span><span class="tag">Quick learner</span></div>
+</div></section>
+
+<section id="education"><div class="wrap">
+<h2 class="rv">Education</h2>
+<p class="lead rv">My academic path so far.</p>
+<div class="tl rv">
+<div class="card"><span class="yr">Present</span><h3>Bachelor of Computer Applications (BCA)</h3><p>Computer Application, SAGEMMC. Studying programming, databases, web development and software engineering.</p></div>
+</div></div></section>
+
+<section id="projects" style="background:color-mix(in srgb,var(--surface) 72%,transparent)"><div class="wrap">
+<h2 class="rv">Projects</h2>
+<p class="lead rv">Things I've built while learning. Replace these with your own project names and links.</p>
+<div class="grid">
+<div class="card rv"><div class="thumb">🌐</div><h3>Project Name 1</h3><p>A short line on what it does, who it helps and what you built it with.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div><div class="links2"><a href="#">Live demo</a><a href="#">Source code</a></div></div>
+<div class="card rv"><div class="thumb">🐍</div><h3>Project Name 2</h3><p>A short line on what it does, who it helps and what you built it with.</p><div class="tags"><span class="tag">Python</span><span class="tag">SQL</span></div><div class="links2"><a href="#">Live demo</a><a href="#">Source code</a></div></div>
+<div class="card rv"><div class="thumb">⚛️</div><h3>Project Name 3</h3><p>A short line on what it does, who it helps and what you built it with.</p><div class="tags"><span class="tag">React</span><span class="tag">JavaScript</span></div><div class="links2"><a href="#">Live demo</a><a href="#">Source code</a></div></div>
+</div></div></section>
+
+<section id="certs"><div class="wrap">
+<h2 class="rv">Certifications</h2>
+<p class="lead rv">Courses and credentials that back up my skills.</p>
+<div class="grid">
+<div class="card rv"><div class="ico">🏅</div><h3>Certification Name 1</h3><p>Issuing organization, year</p></div>
+<div class="card rv"><div class="ico">🎓</div><h3>Certification Name 2</h3><p>Issuing organization, year</p></div>
+<div class="card rv"><div class="ico">📜</div><h3>Certification Name 3</h3><p>Issuing organization, year</p></div>
+</div></div></section>
+
+<section id="resume" style="background:color-mix(in srgb,var(--surface) 72%,transparent)"><div class="wrap">
+<div class="res rv">
+<div><h2>Resume</h2><p>A one-page summary of my education, skills, projects and certifications.</p></div>
+<button class="btn p" onclick="window.print()">Print or save as PDF</button>
+</div></div></section>
+
+<section id="contact"><div class="wrap">
+<h2 class="rv">Contact</h2>
+<p class="lead rv">Have an opportunity or a question? Message me on WhatsApp.</p>
+<div class="cgrid">
+<a class="card c rv" href="https://wa.me/916261194184" target="_blank" rel="noopener"><div class="ico">💬</div><h3>WhatsApp</h3><p>+91 62611 94184</p></a>
+<a class="card c rv" href="mailto:your-email@example.com"><div class="ico">✉️</div><h3>Email</h3><p>your-email@example.com</p></a>
+<a class="card c rv" href="#"><div class="ico">💼</div><h3>LinkedIn</h3><p>Add your profile link</p></a>
+<a class="card c rv" href="#"><div class="ico">🐙</div><h3>GitHub</h3><p>Add your profile link</p></a>
+</div></div></section>
+
+<footer>© <span id="y"></span> Riya Priyanshi Nag. All rights reserved.</footer>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+// typing
+const roles=['Python Developer','Frontend Developer','Full Stack Developer'];let r=0,c=0,del=false;const t=document.getElementById('type');
+(function tick(){const w=roles[r];t.textContent=w.slice(0,c);
+if(!del&&c===w.length){del=true;return setTimeout(tick,1500)}
+if(del&&c===0){del=false;r=(r+1)%roles.length}
+c+=del?-1:1;setTimeout(tick,del?40:90)})();
+// reveal + skill bars
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('.bar i').forEach(b=>b.style.width=b.dataset.w+'%');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+// nav
+const links=document.getElementById('links'),bg=document.getElementById('burger');
+bg.onclick=()=>{const o=links.classList.toggle('open');bg.setAttribute('aria-expanded',o)};
+links.querySelectorAll('a').forEach(a=>a.onclick=()=>{links.classList.remove('open');bg.setAttribute('aria-expanded',false)});
+const secs=[...document.querySelectorAll('section[id]')];
+addEventListener('scroll',()=>{let cur='home';secs.forEach(s=>{if(scrollY>=s.offsetTop-140)cur=s.id});links.querySelectorAll('a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+cur))},{passive:true});
+// theme
+document.getElementById('theme').onclick=()=>{const d=document.documentElement;const dark=d.dataset.theme?d.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;d.dataset.theme=dark?'light':'dark'};
+</script>
+</body>
+</html>
